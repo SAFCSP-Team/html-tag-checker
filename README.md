@@ -47,7 +47,8 @@ the output will be
 ```
 Is HTML tag nesting correct? false
 ```
-beacuse the closing `</head>` not included.
+
+It means there is an issue with the tag nesting, the closing `</head>` does not exist.
 ## Qualification to pass
 
  * The code should run successfully.
