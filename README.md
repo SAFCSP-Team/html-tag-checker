@@ -17,10 +17,13 @@ The software development company plans to develop a feature for their project th
     - `tagName`: A string representing the HTML tag name.
     - `attributes`: A list of string arrays, where each array represents an attribute of the HTML tag.
     - `children`: A list of TreeNode objects representing the children nodes of the current node.
-* Create a function named `buildHTMLTree` that takes a list of strings as input. This function will build the HTML tree by parsing the list of HTML tags.
-* Create a function named `createNodeFromTag` that takes a string representing an HTML tag and returns a TreeNode object. This function should parse the tag string and extract the tag name and its attributes.
+* Create a function named `buildHTMLTree` that takes a list of strings as input, this function will build the HTML tree by parsing the list of HTML tags.
+* Create a function named `createNodeFromTag` that takes a string representing an HTML tag and returns a TreeNode object, this function should parse the tag string and extract the tag name and its attributes.
 * Create a function named `checkTagNesting` that takes a TreeNode object representing the root of the HTML tree and a `Stack<String>` object to track the tag nesting.
-* In the main method, read the contents of the HTML file into a list of strings, then call the `buildHTMLTree` function with the list of lines to build the HTML tree and, call the `checkTagNesting` function with the root node and an empty stack to check if the tag nesting is correct.
+* In the main method:
+     * read the contents of the HTML file into a list of strings.
+     * call the `buildHTMLTree` function with the list of lines to build the HTML tree.
+     * call the `checkTagNesting` function with the root node and an empty stack to check if the tag nesting is correct.
 * The code will check the correctness of tag nesting and print whether the nesting is correct or not.
 
 
