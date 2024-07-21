@@ -8,32 +8,75 @@ This project aims to test your knowledge of data structures and algorithms and u
  
 ## Problem
 
-A software development company is facing an issue maintaining its HTML files’ integrity. 
-This project will check the nesting of HTML tags when reading files. This functionality will ensure that HTML tags in the file are correctly nested, by analyzing the structure of the HTML tags, the checker will identify any incorrect or mismatched nesting.
+A software development company is facing an issue with maintaining the integrity of its HTML files, this project will check the nesting of HTML tags when reading files.
+This functionality will ensure that HTML tags in the file are correctly nested, by analyzing the structure of the HTML tags, the checker will identify any incorrect or mismatched nesting.
 
 
 ## Features
 * Read the HTML file character by character
 * Check the HTML file is correctly nested.
 * Check each closing tag it's for the last open tag.
-* Decide if `<` is used for an open tag `<`, close tag `</`, or comment `<!`.
-* Retrieve a successful message if the HTML file is correctly nested or the type of error if there is an issue in the file.
+* decide if `<` is used for an open tag `<`, close tag `</`, or comment `<!`.
+* retrieve a successful message if the HTML file is correctly nested or the type of error if there is an issue in the file.
   
 ## Implementation
 
-* Create the `Tag` class and represent a tag in the HTML that will have the following properties:
-      * tagName: A string representing the HTML tag name.
-      * attributes: A list of string arrays, where each array represents an attribute of the HTML tag.
-      * children: A list of Tags objects representing the nested tags of the current tag.
+* Create the `Tag` class and it will have the following properties:
+  * tagName: A string representing the HTML tag name.
+  * attributes: A list of string arrays, where each array represents an attribute of the HTML tag.
+
+* Create an `HTMLTagChecker` class.
+   * Create a function named `CreateTag` that takes a string representing an HTML tag and returns a Tag object, this function should parse the tag string and extract the tag name and its attributes.
+   * Create a function named `TagChecker` that takes a tag stack to determine if the file is nested correctly or not by parsing the list of HTML tags.
+
 
 
 ## Output
 ```
-Is HTML tag nesting correct? true
+The HTML file nesting correct
 ```
 
 ## Test Case
+1.
+```HTML
+<html lang="en">
+<head>
+<title>
 
+</title>
+</body>
+<body>
+      
+</body>
+
+```
+
+the output will be 
+```
+Error: Found mismatched closing tag: </body>
+```
+it's should be `</head> `instead of `</body>`
+
+2. 
+```HTML
+<html lang="en">
+<head>
+<title>
+
+</title>
+<body>
+      
+</body>
+</html>
+```
+
+the output will be 
+
+```
+Error: Not found closing tag: <head>
+```
+
+3.
 ```HTML
 <html lang="en">
 <head>
@@ -41,17 +84,20 @@ Is HTML tag nesting correct? true
 
 </title>
 </head>
+</head>
 <body>
       
 </body>
+</html>
+
 ```
 
 the output will be 
+
 ```
-Is HTML tag nesting correct? false
+Error: Found additional closing tag: <head>
 ```
 
-It means there is an issue with the tag nesting, the closing `</head>` does not exist.
 ## Qualification to pass
 
  * The code should run successfully.
