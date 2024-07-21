@@ -26,6 +26,7 @@ This functionality will ensure that HTML tags in the file are correctly nested, 
   * attributes: A list of string arrays, where each array represents an attribute of the HTML tag.
 
 * Create an `HTMLTagChecker` class.
+   * Create a function named `Read_file` that reads the file character by character and takes decisions based on the `<` sign.
    * Create a function named `CreateTag` that takes a string representing an HTML tag and returns a Tag object, this function should parse the tag string and extract the tag name and its attributes.
    * Create a function named `TagChecker` that takes a tag stack to determine if the file is nested correctly or not by parsing the list of HTML tags.
 
