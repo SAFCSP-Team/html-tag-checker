@@ -16,8 +16,8 @@ This functionality will ensure that HTML tags in the file are correctly nested, 
 * Read the HTML file character by character
 * Check the HTML file is correctly nested.
 * Check each closing tag it's for the last open tag.
-* decide if `<` is used for an open tag `<`, close tag `</`, or comment `<!`.
-* retrieve a successful message if the HTML file is correctly nested or the type of error if there is an issue in the file.
+* Decide if `<` is used for an open tag `<`, close tag `</`, or comment `<!`.
+* Retrieve a successful message if the HTML file is correctly nested or the type of error if there is an issue in the file.
   
 ## Implementation
 
@@ -31,11 +31,6 @@ This functionality will ensure that HTML tags in the file are correctly nested, 
    * Create a function named `tagChecker` that takes a tag stack to determine if the file is nested correctly or not by parsing the list of HTML tags.
 
 
-
-## Output
-```
-The HTML file nesting correct
-```
 
 ## Test Case
 1.
@@ -97,6 +92,25 @@ the output will be
 
 ```
 Error: Found additional closing tag: <head>
+```
+4.
+```HTML
+<html lang="en">
+<head>
+<title>
+
+</title>
+</head>
+<body>
+      
+</body>
+</html>
+```
+
+the output will be 
+
+```
+The HTML file nesting correct
 ```
 
 ## Qualification to pass
