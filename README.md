@@ -16,8 +16,8 @@ This project will check the nesting of HTML tags when reading files. This functi
 * Read the HTML file character by character
 * Check the HTML file is correctly nested.
 * Check each closing tag it's for the last open tag.
-* decide if `<` is used for an open tag `<`, close tag `</`, or comment `<!`.
-* retrieve a successful message if the HTML file is correctly nested or the type of error if there is an issue in the file.
+* Decide if `<` is used for an open tag `<`, close tag `</`, or comment `<!`.
+* Retrieve a successful message if the HTML file is correctly nested or the type of error if there is an issue in the file.
   
 ## Implementation
 
