@@ -13,7 +13,7 @@ This functionality will ensure that HTML tags in the file are correctly nested, 
 
 
 ## Features
-* Read the HTML file character by character
+* Read the HTML file character by character.
 * Check the HTML file is correctly nested.
 * Check each closing tag it's for the last open tag.
 * Decide if `<` is used for an open tag `<`, close tag `</`, or comment `<!`.
