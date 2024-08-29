@@ -22,13 +22,14 @@ This functionality will ensure that HTML tags in the file are correctly nested, 
 ## Implementation
 
 * Create the `Tag` class and it will have the following properties:
-  * `tagName`: A string representing the HTML tag name.
+  * `name`: A string representing the HTML tag name.
   * `attributes`: A list of string arrays, where each array represents an attribute of the HTML tag.
 
 * Create an `HTMLTagChecker` class.
    * Create a function named `readFile` that reads the file character by character and takes decisions based on the `<` sign.
-   * Create a function named `createTag` that takes a string representing an HTML tag and returns a Tag object, this function should parse the tag string and extract the tag name and its attributes.
-   * Create a function named `tagChecker` that takes a tag stack to determine if the file is nested correctly or not by parsing the list of HTML tags.
+   * Create a function named `Tag` that takes a string representing an HTML tag and returns a Tag object, this function should parse the tag string and extract the tag name and its 
+    attributes.
+   * Create a function named `Checker` that takes a tag stack to determine if the file is nested correctly or not by parsing the list of HTML tags.
 
 
 
