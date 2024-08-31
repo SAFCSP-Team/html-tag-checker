@@ -15,21 +15,21 @@ This functionality will ensure that HTML tags in the file are correctly nested, 
 ## Features
 * Read the HTML file character by character.
 * Check the HTML file is correctly nested.
-* Check each closing tag it's for the last open tag.
-* Decide if `<` is used for an open tag `<`, close tag `</`, or comment `<!`.
+* Check each closing tag that it is for the last opened tag.
+* Decide what `<` is used for. An open tag `<`, close tag `</`, or comment `<!`.
 * Retrieve a successful message if the HTML file is correctly nested or the type of error if there is an issue in the file.
   
 ## Implementation
 
-* Create the `Tag` class and it will have the following properties:
+* Implement the `Tag` class with the following properties.
   * `name`: A string representing the HTML tag name.
-  * `attributes`: A list of string arrays, where each array represents an attribute of the HTML tag.
+  * `attributes`: A list of string arrays, where each array represents an HTML tag attribute.
 
-* Create an `HTMLTagChecker` class.
+* Implement the `HTMLTagChecker` class.
    * Create a function named `readFile` that reads the file character by character and takes decisions based on the `<` sign.
-   * Create a function named `Tag` that takes a string representing an HTML tag and returns a Tag object, this function should parse the tag string and extract the tag name and its 
+   * Create a function named `tag` that takes a string representing an HTML tag and returns a Tag object, this function should parse the tag string and extract the tag name and its 
     attributes.
-   * Create a function named `Checker` that takes a tag stack to determine if the file is nested correctly or not by parsing the list of HTML tags.
+   * Create a function named `check` that checks a stack of tags to determine if the file is nested correctly by parsing the list of HTML tags.
 
 
 
@@ -111,10 +111,10 @@ Error: Found additional closing tag: <head>
 the output will be 
 
 ```
-The HTML file nesting correct
+The HTML file nesting is correct
 ```
 
 ## Qualification to pass
 
- * The code should run successfully.
- * Write all required functions correctly and logically.
+ - [ ] The code should run successfully.
+ - [ ] Write all the required functions correctly.
